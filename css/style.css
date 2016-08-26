@@ -1,0 +1,8 @@
+.reply-form {
+    width: 300px;
+    display: none;
+}
+
+.remove {
+    cursor: pointer;
+}
