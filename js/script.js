@@ -36,6 +36,8 @@ function showAnswerForm(commentId) {
 						$(this).remove();
 					}});
 					$("#comment" + commentId + ">.media-body>.button-holder button").removeClass("disabled");
+				} else {
+					alert(data['error']);
 				}
 			}
 		});
@@ -55,6 +57,8 @@ function getComments(beforeSend, success, removed) {
 			if (!data['error']) {
 				lastUpdate = data['lastUpdate'];
 				success(data);
+			} else {
+				alert(data['error']);
 			}
 		}
 	});
@@ -71,6 +75,8 @@ function removeComment(commentId) {
 				$("#comment" + commentId).slideUp({complete: function() {
 					$(this).remove();
 				}});
+			} else {
+				alert(data['error']);
 			}
 		}
 	});
@@ -102,6 +108,8 @@ $(document).ready(function() {
 					addComment(data);
 					$("#add-comment img").hide();
 					$("#add-comment button").show();
+				} else {
+					alert(data['error']);
 				}
 			}
 		});

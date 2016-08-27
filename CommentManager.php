@@ -2,7 +2,7 @@
 
 class CommentManager {
 	const DB_HOST = "localhost";
-	const DB_USER = "root";
+	const DB_USER = "";
 	const DB_PASSWORD = "";
 	const DB_NAME = "comments";
 
@@ -55,7 +55,7 @@ class CommentManager {
 		if ($stmt->errno || $stmt1->errno) {
 			throw new DbException($stmt->error);
 		} else {
-			return array("qq" => "123");
+			return array();
 		}
 	}
 }
